@@ -30,3 +30,4 @@ navbar:
       }
 
 github: {user: ramnathv, repo: rsite}
+url: "/rsite"

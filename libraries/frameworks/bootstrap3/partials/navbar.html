@@ -12,7 +12,7 @@
       <ul class="nav navbar-nav">
         {{# site.navbar }}
           <li class="{{ class }}">
-            <a href="{{ href }}" {{# dropdown }}class="dropdown-toggle" data-toggle="dropdown"{{/ dropdown }}>
+            <a href="{{site.url}}{{ href }}" {{# dropdown }}class="dropdown-toggle" data-toggle="dropdown"{{/ dropdown }}>
               {{# icon }}<i class="icon-{{.}}"> </i>{{/ icon}}
               {{ item }} {{# dropdown }}<b class="caret"></b>{{/ dropdown }}
             </a>
