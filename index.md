@@ -5,7 +5,7 @@ layout: deck
 mode: selfcontained
 hitheme: solarized_light
 editlink: "index.Rmd"
---- &jumbotron .col-md-6
+--- &jumbotron .col-md-6 #vid
 
 <style>
 .jumbotron pre {
@@ -47,3 +47,11 @@ R is open. So you can inspect the code and tinker with it as much as you like. T
 ## <i class="icon-gift"> </i>Cutting Edge
 
 Leading academics and researchers from around the world use R to develop the latest methods in statistics, machine learning, and predictive modeling.
+
+
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".jumbotron").fitVids();
+  });
+</script>
