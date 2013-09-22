@@ -5,7 +5,7 @@ layout: deck
 mode: selfcontained
 hitheme: solarized_light
 url: {lib: ../libraries}
-assets: {js: "books/js/mustache.js", css: "books/css/app.css"}
+assets: {js: "/rsite/books/js/mustache.js", css: "/rsite/books/css/app.css"}
 editlink: "books/issues.json"
 ---
 
