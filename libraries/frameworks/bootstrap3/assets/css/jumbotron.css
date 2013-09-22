@@ -1,0 +1,31 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#features p, #features li {
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  line-height: 1.6em;
+}
+
+#features h2, .jumbotron h2 {
+  font-family: "Open Sans Condensed";
+}
+.jumbotron h1 {
+  font-size: 64px;
+  font-family: "Open Sans Condensed";
+  color: #002b36;
+}
+.jumbotron {
+  background-color: #fdf6e3;
+}
+body {
+  /* color: #93a1a1; */
+  color: #002b36;
+}
+.navbar-inverse {
+  background-color: #002b36;
+}
+

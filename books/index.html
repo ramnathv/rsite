@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <title>Books</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/img/favicon.jpg">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="../libraries/frameworks/bootstrap3/dist/css/bootstrap.css" rel="stylesheet">
+    
+    
+    <!-- Syntax Highlighter CSS -->
+    <link href="../libraries/highlighters/highlight.js/css/solarized_light.css" rel="stylesheet">
+    
+    <!-- Extra CSS: Fonts -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href="../libraries/frameworks/bootstrap3/assets/css/gh-buttons.css" rel="stylesheet">
+    
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap3/assets/js/html5shiv.js"></script>
+      <script src="bootstrap3/assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+        
+         
+    <!-- Custom styles for this template -->
+    <link href="../libraries/frameworks/bootstrap3/assets/css/jumbotron.css" rel="stylesheet">
+
+    <link rel=stylesheet href="/books/css/app.css"></link>
+
+    <script src="../libraries/frameworks/bootstrap3/assets/js/jquery.js"></script>
+    
+    
+  </head>
+
+
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li class="active">
+            <a href="/" >
+              <i class="icon-home"> </i>
+              Home 
+            </a>
+        </li>
+          <li class="">
+            <a href="/about" >
+              <i class="icon-signin"> </i>
+              About 
+            </a>
+        </li>
+          <li class="">
+            <a href="/docs" >
+              <i class="icon-gift"> </i>
+              Documentation 
+            </a>
+        </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-hand-right"> </i>
+              Resources <b class="caret"></b>
+            </a>
+          <ul class="dropdown-menu">
+            <li><a href="/books">
+               <i class="icon-book"> </i> Books
+             </a></li>
+            <li><a href="/tutorials">
+               <i class="icon-"> </i> Tutorials
+             </a></li>
+            <li><a href="/courses">
+               <i class="icon-"> </i> Courses
+             </a></li>
+          </ul>
+        </li>
+      </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <p class="col-md-1">Filter by :</p>
+        <ul id="filterBy" class='list-inline'>
+            <li><a href="#" data-level="any" class="active" title="filter books by All">All</a></li>
+            <li><a href="#" data-level="Beginner" title="filter books by Beginner">Beginner</a></li>
+            <li><a href="#" data-level="Intermediate" title="filter books by Intermediate">Intermediate</a></li>
+            <li><a href="#" data-level="Advanced" title="filter books by Advanced">Advanced</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ////////// WRAPPER BOOKS -->
+
+<div class="row" id="issueswrap"></div>
+
+<p></div></p>
+
+<script type="text/javascript">
+
+function randOrd(){
+return (Math.round(Math.random())-0.5); 
+}
+
+function filterBy() {
+var // var's sort by
+    active = 'active',
+    btFilterBy = $('#filterBy').find('a'),
+    booksection = $('.booksection');
+
+// interaction filter by level
+btFilterBy.on('click', function(e) {
+    e.preventDefault();
+    var level = $(this).data('level');
+    if (level==='any') {
+        // restore all books
+        booksection.show();
+    } else {
+        booksection.not('.' + level).fadeOut('fast');
+        booksection.filter('.' + level).fadeIn('fast');
+    }
+
+    btFilterBy.removeClass(active);
+    $(this).addClass(active);
+});
+}
+
+$(document).ready(function() {
+// get the data and compile into the html template
+$.getJSON('/books/issues.json?' + Math.random(), function(data) {
+    var template = $('#booktpl').html(),
+        issuesWrap = $('#issueswrap');
+
+    data.books.sort(randOrd);
+    issuesWrap.html(Mustache.to_html(template, data));
+
+    filterBy();
+});
+
+});
+</script>
+
+
+<script id="booktpl" type="text/template">
+  {{# books }}
+  <div class='col-md-4 booksection {{level}}' style='margin-bottom: 20px;'>
+  <div class="media">
+  <a class="pull-left" href="{{ url }}" target="_blank">
+    <img class="media-object" src="/books/{{cover}}" alt="..." width=150px height=200px>
+  </a>
+  <div class="media-body">
+   <h4 class="media-heading">{{ title }}</h4>
+   <h3><a href="{{authorUrl}}" target="_blank">{{author}}</a></h3>
+   <p class="level">{{level}}</p>
+   <p class="description">{{info}}</p>
+  </div>
+  </div>
+  </div>
+  {{/books}}
+</script>
+
+    
+    <div class="container " id='edit-buttons'>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="button-group pull-right">
+           <a href="http://prose.io/#ramnathv/rsite/edit/gh-pages/books/issues.json"/ class="button icon edit">Edit Me</a>
+           <!-- 
+           <a href="#" class="button">Raw</a>
+           <a href="#" class="button">History</a>
+           -->
+          </div>
+       </div>
+      </div>
+    </div>    
+  </body>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../libraries/frameworks/bootstrap3/dist/js/bootstrap.min.js"></script>
+    <script src="../libraries/frameworks/bootstrap3/assets/js/holder.js"></script>
+    
+    <!-- Load Javascripts for Widgets -->
+
+    <script src="/books/js/mustache.js"></script>
+
+
+    <!-- LOAD HIGHLIGHTER JS FILES -->
+    <script src="../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+     
+        
+    <script>
+    $(function() {
+      $('ul.nav li.active').removeClass('active');
+      return $("ul.nav a[href$='" + window.location.pathname.replace(/\/$/, '') + "']").parents('li').addClass('active');
+    });
+    </script>
+
+</html>

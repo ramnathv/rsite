@@ -1,0 +1,256 @@
+/*
+ JSmag Styles
+*/
+body {
+  padding-top: 140px;
+  background-color: #323330;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.jshead {
+  height: 90px;
+  padding: 10px 0;
+  background-color: #eedb59;
+  border-bottom: 1px solid #242424;
+  text-align: center;
+}
+.github img {
+  max-height: 113px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 10000;
+}
+footer {
+  height: 10px;
+  line-height: 10px;
+  color: #444;
+}
+.booksection {
+  margin-bottom: 30px;
+}
+
+.booksection #cover {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 184px;
+  margin-right: 20px;
+  outline: 3px solid white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.booksection #cover #beginner,
+.booksection #cover #intermediate,
+.booksection #cover #advanced {
+  position: absolute;
+  display: block;
+  height: 12px;
+  top: 5px;
+  left: 5px;
+  background: url('../img/level.png') no-repeat top left;
+}
+.booksection #cover #beginner {
+  width: 13px;
+}
+.booksection #cover #intermediate {
+  width: 26px;
+}
+.booksection #cover #advanced {
+  width: 39px;
+}
+.booksection p.description {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 17px;
+  height: 80px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.booksection p.level {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.booksection .view {
+  display: block;
+  position: absolute;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  width: 140px;
+  height: 184px;
+  font: bold 18px 'Open Sans Condensed', sans-serif;
+  line-height: 184px;
+  background-color: rgba(247, 223, 30, 0.9);
+  z-index: 10;
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 10px white;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+.booksection .view:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1000)";
+  filter: alpha(opacity=1000);
+  opacity: 10;
+}
+h1,
+#headerlink {
+  font: normal 13px 'Open Sans', sans-serif;
+  color: #2f2e2d;
+  text-shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
+}
+#headerlink {
+  font-size: 12px;
+  color: #9e8c09;
+}
+h2,
+h4 {
+  text-transform: uppercase;
+  font: 400 16px 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  color: #efa121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+h3 {
+  line-height: 13px;
+}
+h3 a {
+  text-decoration: underline;
+  font: normal 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #cfb798;
+}
+h3 a:hover,
+h3 a:active {
+  color: #cfb798;
+}
+hr {
+  margin: 8px 0;
+  border-top: 1px solid rgba(240, 240, 240, 0.4);
+  border-bottom: none;
+}
+a#infos {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -13px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  font: bold 26px Arial, Helvetica, sans-serif;
+  line-height: 26px;
+  -webkit-transition: color .3s linear;
+  -moz-transition: color .3s linear;
+  -o-transition: color .3s linear;
+  -ms-transition: color .3s linear;
+  transition: color .3s linear;
+}
+a#infos:hover {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+#twittit {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  margin-top: -9px;
+}
+#jsinfos {
+  padding: 10px 20px;
+  background: rgba(240, 240, 240, 0.2);
+  border-radius: 4px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 4px white;
+}
+#jsinfos h4 {
+  margin-bottom: 4px;
+  color: #f7df1e;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+#jsinfos p,
+#jsinfos a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+#jsinfos a:hover {
+  text-decoration: underline;
+}
+#jsinfos input[type="submit"] {
+  margin-top: -7px;
+}
+#jsinfos ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+#jsinfos ul li {
+  display: inline;
+  margin-right: 5px;
+}
+#jsinfos ul li a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer {
+  padding: 10px 0;
+  text-align: center;
+}
+.footer hr {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 9px;
+}
+.footer p,
+.footer a {
+  font-size: 10px;
+}
+.recrutement {
+  color: #eedb59;
+  font-weight: bold;
+  padding: 10px 0;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #252624;
+  -webkit-transition-duration: .4s;
+  -moz-transition-duration: .4s;
+  -ms-transition-duration: .4s;
+  -o-transition-duration: .4s;
+  transition-duration: .4s;
+}
+.recrutement:hover {
+  color: white;
+  text-decoration: none;
+}
+.pythonbooks {
+  background-color: transparent;
+  margin: 0;
+}
+.pythonbooks > * {
+  display: inline;
+  margin-right: 10px;
+}
+#filterBy {
+  float: left;
+  overflow: hidden;
+  margin: 0 0 30px;
+}
+#filterBy li {
+  float: left;
+  margin: 0 0 0 10px;
+  list-style: none;
+}
+#filterBy li:first-child {
+  margin-left: 0;
+}
+#filterBy a {
+  color: #eedb59;
+}
+ #filterBy .active {
+  color: #fff;
+}

@@ -1,0 +1,32 @@
+navbar2:
+  - {item: Create, href: "#about", class: active, icon: "edit"}
+  - {item: Customize, href: "#contact", icon: "hand-right"}
+  - {item: Frameworks, href: "#frameworks", dropdown: true, class: dropdown, 
+     menu: [{item: io2012}, {item: shower}]
+    }
+  - {item: Lessons, href: "#lessons", dropdown: true, class: dropdown, 
+     menu: [{item: Lesson1, href: "lesson1.html"}, {item: Lesson2}]
+    }
+  - {item: Questions, href: "qa.html", icon: question}
+  - {item: Tutorials, href: "tutorials/index.html", icon: "gallery", 
+      class: dropdown, 
+        dropdown: true, menu: [
+         {item: "Tutorial 1", href: 'tutorials/index.html', icon: ""},
+         {item: "Tutorial 2", href: 'tutorials/index.html', icon: ""},
+         {item: "Tutorial 3", href: 'tutorials/index.html', icon: ""}
+        ]
+      }
+favicon: favicon.jpg
+navbar:
+    - {item: Home, href: '/', icon: home, class: active}
+    - {item: About, href: '/about', icon: signin}
+    - {item: Documentation, href: "/docs", icon: gift}
+    - {item: Resources, href: "#", icon: "hand-right", class: dropdown, 
+        dropdown: true, menu: [
+         {item: Books, href: '/books', icon: "book"},
+         {item: Tutorials, href: '/tutorials', icon: ""},
+         {item: Courses, href: '/courses', icon: ""}
+        ]
+      }
+
+github: {user: ramnathv, repo: rsite}

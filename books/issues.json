@@ -1,0 +1,47 @@
+{ "books" : [
+    {
+        "title": "R in a Nutshell",
+        "author": "Joseph Adler",
+        "authorUrl": "",
+        "level": "Intermediate",
+        "info": "R in a Nutshell provides a quick and practical way to learn this increasingly popular open source language and environment.",
+        "url": "http://shop.oreilly.com/product/9780596801717.do",
+        "cover": "img/r_in_nutshell.jpg"
+    },
+    {
+        "title": "R Cookbook",
+        "author": "Paul Teetor",
+        "authorUrl": "",
+        "level": "Beginner",
+        "info": "With more than 200 practical recipes, this book helps you perform data analysis with R quickly and efficiently. ",
+        "url": "http://shop.oreilly.com/product/9780596809164.do",
+        "cover": "img/r_cookbook.jpg"
+    },
+    {
+        "title": "Dynamic Documents with R",
+        "author": "Yihui Xie",
+        "authorUrl": "http://yihui.name",
+        "level": "Intermediate",
+        "info": "Suitable for both beginners and advanced users, this book shows you how to write reports in simple languages such as Markdown.",
+        "url": "http://shop.oreilly.com/product/9780596801717.do",
+        "cover": "img/dyn_docs_with_r.jpg"
+    },
+    {
+        "title": "R Graphics Cookbook",
+        "author": "Winston Chang",
+        "authorUrl": "",
+        "level": "Intermediate",
+        "info": "This practical guide provides more than 150 recipes to help you generate high-quality graphs quickly, without having to comb through all the details of R’s graphing systems. Each recipe tackles a specific problem with a solution you can apply to your own project, and includes a discussion of how and why the recipe works.",
+        "url": "http://shop.oreilly.com/product/0636920023135.do#",
+        "cover": "img/r_graphics_cookbook.jpg"
+    },
+    {
+        "title": "ggplot2",
+        "author": "Hadley Wickham",
+        "authorUrl": "http://github.com/hadley",
+        "level": "Intermediate",
+        "info": "This book describes the theoretical underpinnings of ggplot2 and shows you how all the pieces fit together. This book helps you understand the theory that underpins ggplot2, and will help you create new types of graphic specifically tailored to your needs.",
+        "url": "http://shop.oreilly.com/product/0636920023135.do#",
+        "cover": "img/ggplot2.png"
+    }
+]}
