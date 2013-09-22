@@ -23,7 +23,7 @@ navbar:
     - {item: Documentation, href: "/docs", icon: gift}
     - {item: Resources, href: "#", icon: "hand-right", class: dropdown, 
         dropdown: true, menu: [
-         {item: Books, href: '/books', icon: "book"},
+         {item: Books, href: '/books/index.html', icon: "book"},
          {item: Tutorials, href: '/tutorials', icon: ""},
          {item: Courses, href: '/courses', icon: ""}
         ]

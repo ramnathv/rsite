@@ -78,7 +78,7 @@ $.getJSON('{{site.url}}/books/issues.json?' + Math.random(), function(data) {
   <div class='col-md-4 booksection {{level}}' style='margin-bottom: 20px;'>
   <div class="media">
   <a class="pull-left" href="{{ url }}" target="_blank">
-    <img class="media-object" src="{{site.url}}/books/{{cover}}" alt="..." width=150px height=200px>
+    <img class="media-object" src="/rsite/books/{{cover}}" alt="..." width=150px height=200px>
   </a>
   <div class="media-body">
    <h4 class="media-heading">{{ title }}</h4>
