@@ -5,7 +5,7 @@ layout: deck
 mode: selfcontained
 hitheme: solarized_light
 url: {lib: ../libraries}
-assets: {js: "/books/js/mustache.js", css: "/books/css/app.css"}
+assets: {js: "books/js/mustache.js", css: "books/css/app.css"}
 editlink: "books/issues.json"
 ---
 
@@ -58,7 +58,7 @@ btFilterBy.on('click', function(e) {
 
 $(document).ready(function() {
 // get the data and compile into the html template
-$.getJSON('/books/issues.json?' + Math.random(), function(data) {
+$.getJSON('{{site.url}}/books/issues.json?' + Math.random(), function(data) {
     var template = $('#booktpl').html(),
         issuesWrap = $('#issueswrap');
 
@@ -78,7 +78,7 @@ $.getJSON('/books/issues.json?' + Math.random(), function(data) {
   <div class='col-md-4 booksection {{level}}' style='margin-bottom: 20px;'>
   <div class="media">
   <a class="pull-left" href="{{ url }}" target="_blank">
-    <img class="media-object" src="/books/{{cover}}" alt="..." width=150px height=200px>
+    <img class="media-object" src="{{site.url}}/books/{{cover}}" alt="..." width=150px height=200px>
   </a>
   <div class="media-body">
    <h4 class="media-heading">{{ title }}</h4>

@@ -34,7 +34,7 @@
     <!-- Custom styles for this template -->
     <link href="../libraries/frameworks/bootstrap3/assets/css/jumbotron.css" rel="stylesheet">
 
-    <link rel=stylesheet href="/books/css/app.css"></link>
+    <link rel=stylesheet href="books/css/app.css"></link>
 
     <script src="../libraries/frameworks/bootstrap3/assets/js/jquery.js"></script>
     
@@ -148,7 +148,7 @@ btFilterBy.on('click', function(e) {
 
 $(document).ready(function() {
 // get the data and compile into the html template
-$.getJSON('/books/issues.json?' + Math.random(), function(data) {
+$.getJSON('/rsite/books/issues.json?' + Math.random(), function(data) {
     var template = $('#booktpl').html(),
         issuesWrap = $('#issueswrap');
 
@@ -167,7 +167,7 @@ $.getJSON('/books/issues.json?' + Math.random(), function(data) {
   <div class='col-md-4 booksection {{level}}' style='margin-bottom: 20px;'>
   <div class="media">
   <a class="pull-left" href="{{ url }}" target="_blank">
-    <img class="media-object" src="/books/{{cover}}" alt="..." width=150px height=200px>
+    <img class="media-object" src="{{site.url}}/books/{{cover}}" alt="..." width=150px height=200px>
   </a>
   <div class="media-body">
    <h4 class="media-heading">{{ title }}</h4>
@@ -202,7 +202,7 @@ $.getJSON('/books/issues.json?' + Math.random(), function(data) {
     
     <!-- Load Javascripts for Widgets -->
 
-    <script src="/books/js/mustache.js"></script>
+    <script src="books/js/mustache.js"></script>
 
 
     <!-- LOAD HIGHLIGHTER JS FILES -->
