@@ -24,7 +24,7 @@ editlink: "index.Rmd"
 
 Statistical Programming Platform
 
-<a class='btn btn-success btn-lg' href="/about">Learn More</a>
+<a class='btn btn-success btn-lg' href="{{site.url}}/about">Learn More</a>
 
 --- &brow #features
 
